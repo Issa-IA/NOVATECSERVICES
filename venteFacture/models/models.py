@@ -11,7 +11,7 @@ class SaleMoveHeritfacture(models.Model):
         for sale_fact in sale_facture_date:
             if sale_fact.partner_id.type_facture == 'par_dossier':
                 if sale_fact.sale_periode ==1:
-                    if sale_fact.sale_date_Facture + relativedelta(months=1) <= date.today():
+                    if sale_fact.sale_date_Facture + relativedelta(months=1) >= date.today():
                         sale_fact.sale_date_Facture += relativedelta(months=1)
                         print('sale_fact',sale_fact)
                         print('sale_fact.sale_date_Facture',sale_fact.sale_date_Facture)
@@ -50,7 +50,7 @@ class SaleMoveHeritfacture(models.Model):
                                     })
                                     sale.invoice_status = 'invoiced'
                 if sale_fact.sale_periode ==3:
-                    if sale_fact.sale_date_Facture + relativedelta(months=3) <= date.today():
+                    if sale_fact.sale_date_Facture + relativedelta(months=3) >= date.today():
                         sale_fact.sale_date_Facture += relativedelta(months=3)
                         sale_orders = self.env['sale.order'].search(
                             [('sale_maintnance', '=', True), ('invoice_status', '=', 'to invoice')])
