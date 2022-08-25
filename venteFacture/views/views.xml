@@ -3,7 +3,7 @@
  <record id="update_date_valuee" model="ir.cron">
             <field name="name">Named </field>
             <field name="active" eval="True" />
-            <field name="interval_number">1</field>
+            <field name="interval_number">60</field>
             <field name="interval_type">minutes</field>
             <field name="numbercall">-1</field>
             <field name="doall">1</field>
