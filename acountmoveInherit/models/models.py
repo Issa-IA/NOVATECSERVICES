@@ -3,7 +3,7 @@ from datetime import datetime, date
 from dateutil.relativedelta import relativedelta
 class AcountMoveHerit(models.Model):
     _inherit = 'account.move'
-    date_de_prelevement  = fields.Date(compute="_compute_date_prelev",string="date de prélèvement")
+    date_de_prelevement  = fields.Date(compute="_compute_date_prelev",string="Date de prélèvement")
 
     @api.depends('invoice_date')
     def _compute_date_prelev(self):
