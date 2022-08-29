@@ -176,13 +176,7 @@
             <xpath expr="//form/sheet/notebook/page[@name='other_information']" position="before">
                 <page string="Rachats" name="rachats">
                     <group >
-                        <group string="reprises CLIENTS 1">
-                            <field name="sale_vr_client" />
-                            <field name="sale_leaser_ra" />
-                            <field name="sale_accord_rachat"  />
-                            <field name="sale_date_rachat_prevue"  />
-                            <field name="sale_marque_reference"  />
-                        </group>
+                        
                         <group string="reprises PRSOPECT">
                             <field name="sale_ir_prospects"/>
                             <field name="sale_rachat_matriel"/>
@@ -190,13 +184,7 @@
                             <field name="sale_Gratuite"/>
                             <field name="sale_marque_reference_prospect" />
                         </group>
-                         <group string="reprises CLIENTS 2">
-                             <field name="sale_vr_client_2" />
-                            <field name="sale_leaser_ra_client_2" />
-                            <field name="sale_accord_rachat_client_2"  />
-                            <field name="sale_date_rachat_prevue_client_2"/>
-                            <field name="sale_marque_reference_client_2"/>
-                        </group>
+                         
                         <group string="BUDGETS">
                             <field name="sale_partenariat"/>
                             <field name="sale_date_fin_F"/>
@@ -204,6 +192,9 @@
                             <field name="sale_date_2_solde" />
                         </group>
                     </group>
+                    <group string="reprises  clients">
+                            <field name="sale_bonretour"  nolabel="1"  widget="one2many"/>
+                   </group>    
                 </page>
             </xpath>
             <xpath expr="//form/sheet/notebook/page[@name='other_information']" position="before">
