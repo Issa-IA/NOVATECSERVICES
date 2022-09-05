@@ -15,7 +15,7 @@
         </record>
 
         <record id="create_facture_action" model="ir.actions.act_window">
-            <field name="name">Générer facture maintenance</field>
+            <field name="name">Genrer facture maintenance</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">facturationauto</field>
             <field name="view_mode">form</field>
