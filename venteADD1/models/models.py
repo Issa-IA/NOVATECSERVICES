@@ -42,7 +42,7 @@ class SaleOrderHerit(models.Model):
     sale_marge_reel = fields.Monetary(default=0.0, string="Marge réelle", compute="sale_marge_reel_fuc",)
     sale_date_traitement = fields.Date("Date de traitement",compute="sale_total_date_traitement")
 
-    ############ zip street city
+    ############ zip street cityy
     sale_type_client = fields.Selection([('Nouveau_client', 'Nouveau client'), ('conversion', 'Conversion'),('additionnel', 'Additionnel')], string='Type de vente')
     street_client = fields.Char(compute="compute_street_client")
     zip_client = fields.Char(compute="compute_zip_client")
