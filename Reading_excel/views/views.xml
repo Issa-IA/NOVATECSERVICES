@@ -36,7 +36,7 @@
 
 
 
-        <menuitem name="Importer un fichier csv "
+        <menuitem name="Importer compteur  "
                   id="Importer_fichier_action"
                   parent="fleet.fleet_vehicles"
                   action="import_excel_file_action"
