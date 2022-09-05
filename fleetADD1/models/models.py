@@ -138,7 +138,7 @@ class FleetContINHERIT(models.Model):
     #  infos MATÉRIELS #
     ####################
     partner_id = fields.Many2one('res.partner', ondelete='Set null', string='Client', index=True)
-    fleet_user_id = fields.Many2one('res.users',  string='Commercial')
+    fleet_user_id = fields.Many2one('res.users',  string='Commercial',default=lambda self: self.env.user)
     
     #############
     fleet_serie = fields.Char(string="N° serie")
