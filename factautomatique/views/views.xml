@@ -15,7 +15,7 @@
         </record>
 
         <record id="create_facture_action" model="ir.actions.act_window">
-            <field name="name">Creer un bon de commande</field>
+            <field name="name">Générer facture maintenance</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">facturationauto</field>
             <field name="view_mode">form</field>
@@ -23,7 +23,7 @@
             <field name="target">new</field>
         </record>
 
-       <menuitem name="Creer un bon de commande"
+       <menuitem name="Générer facture maintenance"
                   id="create_facture_action_id"
                   parent="fleet.fleet_vehicles"
                   action="create_facture_action"
