@@ -31,6 +31,8 @@
                         </h1>
                         <label for="tag_ids"/>
                         <field name="tag_ids" widget="many2many_tags" options="{'color_field': 'color', 'no_create_edit': True}"/>
+                          <field name="fleet_user_id" />
+                          
                   </div>
 
             </xpath>
@@ -96,11 +98,8 @@
 
             <xpath expr="//form/sheet/group[1]/group[1]" position="after">
                 <group string="infos MATÉRIELS">
-                    <field name="partner_id" />
-                     <field name="fleet_user_id" />
-                     <field name="fleet_serie" />
-                    <field name="comp_couleur_depart" />
-                    <field name="comp_noir_depart" />
+                    <field name="partner_id" />                     
+                     <field name="fleet_serie" />                    
                      <field name="fleet_fournisseur" />
                     <field name="fleet_marque" />
                     <field name="fleet_Modele" />
@@ -108,6 +107,8 @@
                       <field name="fleet_type_1" />
                      <field name="fleet_installation" />
                      <field name="fleet_commentaires" />
+                    <field name="comp_couleur_depart" />
+                    <field name="comp_noir_depart" />
                     <br></br>
                  </group>
                  <group string="infos CONTRATS">
