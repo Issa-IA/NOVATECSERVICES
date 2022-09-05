@@ -31,10 +31,10 @@
                         </h1>
                         <label for="tag_ids"/>
                         <field name="tag_ids" widget="many2many_tags" options="{'color_field': 'color', 'no_create_edit': True}"/>
-                       <h1>
+                       <h5>
                           <label for="fleet_user_id"/>
                         <field name="fleet_user_id" />
-                        </h1>
+                        </h5>
                           
                   </div>
 
