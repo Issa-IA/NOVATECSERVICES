@@ -138,7 +138,16 @@ class FleetContINHERIT(models.Model):
     #  infos MATÉRIELS #
     ####################
     partner_id = fields.Many2one('res.partner', ondelete='Set null', string='Client', index=True)
-    fleet_user_id = fields.Many2one('res.users',  string='Commercial',default=lambda self:self.create_uid.id)
+    fleet_user_id = fields.Many2one('res.users',  string='Commercial')
+    def create(self, values):
+        res = super(FleetContINHERIT, self).create(values)
+        # here you can do accordingly
+        return self.create_fleet_user()
+    def create_fleet_user(self):
+        for rec in self:
+            if not rec.fleet_user_id:
+                rec.fleet_user_id = rec.create_uid
+    #############
     fleet_serie = fields.Char(string="N° serie")
     fleet_fournisseur = fields.Many2one('res.partner', ondelete='Set null',string="Fournisseur",index=True)
     fleet_marque = fields.Many2one( "fleet.vehicle.model.brand",string='Marque',related="fleet_Modele.brand_id")
