@@ -138,7 +138,7 @@ class FleetContINHERIT(models.Model):
     #  infos MATÉRIELS #
     ####################
     partner_id = fields.Many2one('res.partner', ondelete='Set null', string='Client', index=True)
-    fleet_user_id = fields.Many2one('res.users',  string='Commercial')
+    fleet_user_id = fields.Many2one('res.users',  string='Commercial',default=lambda self:self.create_uid.id)
     fleet_serie = fields.Char(string="N° serie")
     fleet_fournisseur = fields.Many2one('res.partner', ondelete='Set null',string="Fournisseur",index=True)
     fleet_marque = fields.Many2one( "fleet.vehicle.model.brand",string='Marque',related="fleet_Modele.brand_id")
