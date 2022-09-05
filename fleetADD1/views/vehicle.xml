@@ -97,7 +97,7 @@
             <xpath expr="//form/sheet/group[1]/group[1]" position="after">
                 <group string="infos MATÉRIELS">
                     <field name="partner_id" />
-                     
+                      <field name="fleet_user_id" />
                      <field name="fleet_serie" />
                     <field name="comp_couleur_depart" />
                     <field name="comp_noir_depart" />
