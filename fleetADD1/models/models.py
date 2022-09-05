@@ -139,13 +139,10 @@ class FleetContINHERIT(models.Model):
     ####################
     partner_id = fields.Many2one('res.partner', ondelete='Set null', string='Client', index=True)
     fleet_user_id = fields.Many2one('res.users',  string='Commercial')
-    def create(self, values):
-        res = super(FleetContINHERIT, self).create(values)
-        # here you can do accordingly
-        return self.create_fleet_user()
+    @api.onchange('create_uid')
     def create_fleet_user(self):
         for rec in self:
-            if not rec.fleet_user_id:
+            if rec.fleet_user_id == False:
                 rec.fleet_user_id = rec.create_uid
     #############
     fleet_serie = fields.Char(string="N° serie")
