@@ -82,7 +82,7 @@ class SaleOrderbonretour(models.Model):
                                 'location_id': 5,
                                 'location_dest_id': 8,
                                 'state': 'assigned',
-                                'picking_type_id': stock_type[2].id,
+                                'picking_type_id': 6,
                                 'stock_sale': rec.id
                                 }
                         # self.location_dest_id.id
