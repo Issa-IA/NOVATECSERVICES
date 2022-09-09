@@ -10,8 +10,12 @@ class AcountMoveHerit(models.Model):
         for rec in self:
 
             if rec.invoice_date:
-                date = rec.invoice_date + relativedelta(months=1)
-                rec.date_de_prelevement = date.replace(day=15)
+                    if rec.invoice_date.day >= 15:
+                        date = rec.invoice_date + relativedelta(months=1)
+                        rec.date_de_prelevement = date.replace(day=15)
+                    else:
+                        date = rec.invoice_date
+                        rec.date_de_prelevement = date.replace(day=15)
 
             else:
                 rec.date_de_prelevement = False
