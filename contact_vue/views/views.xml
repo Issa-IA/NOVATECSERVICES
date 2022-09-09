@@ -1,0 +1,41 @@
+<odoo>
+<data>
+
+    <record id="contact_inherit_1" model="ir.ui.view">
+        <field name="name">contact inherit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="priority" eval="2"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//form/sheet/div[1]" position="inside">
+
+                <button name="open_action_parc" type="object" class="oe_stat_button" icon="fa-credit-card">
+                                <div class="o_stat_info">
+                                    <field name="parc_count" class="o_stat_value"/>
+                                    <span class="o_stat_text">Parc</span>
+                                </div>
+                </button>
+                <button name="open_action_fact" type="object" class="oe_stat_button" icon="fa-square-o">
+                                <div class="o_stat_info">
+                                    <field name="par_count" class="o_stat_value"/>
+                                    <span class="o_stat_text">Factures maintenances</span>
+                                </div>
+                </button>
+            </xpath>
+
+            <!--
+            <xpath expr="//form/sheet/div[1]" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+            -->
+
+
+
+    </field>
+    </record>
+</data>
+</odoo>
+
+
+
