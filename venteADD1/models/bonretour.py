@@ -69,7 +69,7 @@ class SaleOrderbonretour(models.Model):
                                  'acount_retour_serie':retour.bonretour_serie,
 
                                  })
-                    sp_stock[0].update({'state': 'assigned', })
+                   
                     print(sp_stock)
 
                 else:
@@ -104,7 +104,7 @@ class SaleOrderbonretour(models.Model):
 
                                  })
                             retour.bonretour_stock_piking = new_reception.id
-                        new_reception.update({'state': 'assigned', })
+                        
 
 
 
