@@ -53,6 +53,9 @@ class SaleOrderbonretour(models.Model):
                 if sp_stock:
                     for retour in rec.sale_bonretour:
                         if retour not in sp_stock.stock_bonretour:
+                             product_uom = \
+                                self.env['product.template'].search_read([('id', '=', retour.bonretour_article.id)])[0][
+                                    'uom_id'][0]
                             
                             self.env['stock.move'].sudo().create(
                                 {'company_id': rec.company_id.id,
@@ -62,7 +65,7 @@ class SaleOrderbonretour(models.Model):
                                  'name': 'new',
                                  'procure_method': rec.procure_method,
                                  'product_id': retour.bonretour_article.id,
-                                 
+                                 'product_uom': product_uom,
                                  'product_uom_qty': 1,
                                  'quantity_done':1,
                                  'picking_id': sp_stock[0].id,
@@ -87,7 +90,9 @@ class SaleOrderbonretour(models.Model):
                         new_reception = self.env['stock.picking'].create(vals)
                         print(new_reception)
                         for retour in rec.sale_bonretour:
-                            
+                            product_uom = \
+                                self.env['product.template'].search_read([('id', '=', retour.bonretour_article.id)])[0][
+                                    'uom_id'][0]
                             self.env['stock.move'].sudo().create(
                                 {'company_id': rec.company_id.id,
                                  'date': date.today(),
@@ -96,7 +101,7 @@ class SaleOrderbonretour(models.Model):
                                  'name': 'new',
                                  'procure_method': rec.procure_method,
                                  'product_id': retour.bonretour_article.id,
-                                 
+                                 'product_uom': product_uom,
                                  'product_uom_qty': 1,
                                  'quantity_done': 1,
                                  'picking_id': new_reception.id,
