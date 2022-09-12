@@ -66,13 +66,12 @@ class SaleOrderbonretour(models.Model):
                                  'product_id': retour.bonretour_article.id,
                                  'product_uom': product_uom,
                                  'product_uom_qty': 1,
-                                 'quantity_done':1,
+                                 
                                  'picking_id': sp_stock[0].id,
                                  'acount_retour_serie':retour.bonretour_serie,
 
                                  })
-                    sp_stock[0].update({'state': 'assigned', })
-                    print(sp_stock)
+                    
 
                 else:
                     if rec.sale_bonretour:
@@ -107,7 +106,7 @@ class SaleOrderbonretour(models.Model):
 
                                  })
                             retour.bonretour_stock_piking = new_reception.id
-                        new_reception.update({'state': 'assigned', })
+                        
 
 
 
