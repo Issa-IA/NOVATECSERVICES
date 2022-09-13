@@ -178,11 +178,11 @@
                     <group >
                         
                         <group string="reprises PRSOPECT">
-                            <field name="sale_ir_prospects"/>
+                            
                             <field name="sale_rachat_matriel"/>
                              <field name="sale_montatnt_IR"/>
                             <field name="sale_Gratuite"/>
-                            <field name="sale_marque_reference_prospect" />
+                            
                         </group>
                          
                         <group string="BUDGETS">
