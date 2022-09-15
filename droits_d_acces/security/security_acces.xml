@@ -18,8 +18,9 @@
 	    <record id="group_commercial" model="res.groups">
 			<field name="name">Commercial</field>
 			<field name="category_id" ref="module_category_parc"/>
-			<field name="implied_ids" eval="[(4, ref('group_Technicien'))]"/>
-			 <!--    <field name="perm_read" eval="True"/>-->
+	     
+             <!-- <field name="implied_ids" eval="[(4, ref('group_Technicien'))]"/> -->
+	     <!--    <field name="perm_read" eval="True"/>-->
              <!--    <field name="perm_write" eval="True"/>-->
              <!--    <field name="perm_create" eval="False"/>-->
              <!--    <field name="perm_unlink" eval="False"/>-->
