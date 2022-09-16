@@ -24,7 +24,7 @@
         'views/product_inherit.xml',
         'views/serach_advanced_partner.xml',
         'views/bonretour.xml',
-        'views/stock_inherit.xml',
+        #'views/stock_inherit.xml',
         'wizard/create_park.xml',
     ],
     # only loaded in demonstration mode
