@@ -16,7 +16,7 @@ class Bonretourtable(models.Model):
     bonretour_date_rachat_prevue = fields.Date("Date de rachat prévue")
     bonretour_article = fields.Many2one('product.product', string="Matériels rachetés")
 
-    bonretour_serie = fields.Char(string="N° serie")
+    bonretour_serie = fields.Char(string="N° serie",readonly=True)
     bonretour_sale_order = fields.Many2one('sale.order', string="Matériels rachetés")
     bonretour_stock_piking = fields.Many2one('stock.picking', string="Matériels rachetés")
 
