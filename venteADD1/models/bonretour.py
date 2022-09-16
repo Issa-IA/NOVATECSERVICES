@@ -107,7 +107,7 @@ class SaleOrderbonretour(models.Model):
                                  'product_id': retour.bonretour_article.id,
                                  'product_uom': retour.bonretour_article.uom_id.id,
                                  'product_uom_qty': 1,
-                                 'quantity_done':1,
+                                 
                                  'picking_id': sp_stock[0].id,
                                  'acount_retour_serie':retour.bonretour_serie,
                                  'stock_move_bonretour':retour.id,
@@ -145,7 +145,7 @@ class SaleOrderbonretour(models.Model):
                                  'product_id': retour.bonretour_article.id,
                                  'product_uom': retour.bonretour_article.uom_id.id,
                                  'product_uom_qty': 1,
-                                 'quantity_done': 1,
+                                 
                                  'picking_id': new_reception.id,
                                  'acount_retour_serie': retour.bonretour_serie,
                                  'stock_move_bonretour': retour.id,
